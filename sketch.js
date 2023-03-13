@@ -1,13 +1,10 @@
-const flock = [];
+let flock;
 function setup() {
 	createCanvas(600, 360);
-	flock.push(new Boid());
+	flock = new Flock(100);
 }
 
 function draw() {
 	background(61);
-	for (let boid of flock) {
-		boid.update();
-		boid.show();
-	}
+	flock.show();
 }
